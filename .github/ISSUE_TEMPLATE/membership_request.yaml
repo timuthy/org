@@ -1,0 +1,68 @@
+# Modifications Copyright SAP SE or an SAP affiliate company and Gardener contributors.
+name: Membership Request
+description: Request a membership in the Gardener org
+labels: ["kind/task"]
+title: "Membership request for <your-GH-handle>"
+body:
+- id: motivation
+  type: textarea
+  attributes:
+    label: "Motivation"
+    description: Describe the motivation of this request and your background shortly - we'd like to know you :-)
+- id: github
+  type: input
+  attributes:
+    label: GitHub Username
+    placeholder: e.g. @example_user
+  validations:
+    required: true
+- id: teams
+  type: input
+  attributes:
+    label: "Teams"
+    placeholder: e.g. gardener-maintainers
+  validations:
+    required: false
+- id: requirements
+  type: checkboxes
+  attributes:
+    label: Requirements
+    options:
+    - label: I've read the [Gardener contributor guideline](https://github.com/gardener/gardener/blob/master/CONTRIBUTING.md).
+      required: true
+    - label: I fulfill all requirements of the requested membership its responsibilities (see [community roles](https://gardener.cloud/docs/contribute/code/roles)).
+      required: true
+    - label: I verified my sponsors have the required community role.
+      required: true
+    - label: I have spoken to my sponsors ahead of this application, and they have agreed to sponsor my application.
+      required: true
+    - label: I prepared and attached a record of community engagement or company affiliation in this issue.
+      required: true
+- id: sponsor_1
+  type: input
+  attributes:
+    label: "Sponsor 1"
+    description: GitHub handle of your sponsor
+    placeholder: e.g. @sponsor-1
+  validations:
+    required: true
+- id: sponsor_2
+  type: input
+  attributes:
+    label: "Sponsor 2"
+    description: GitHub handle of your sponsor
+    placeholder: e.g. @sponsor-2
+  validations:
+    required: true
+- id: contributions
+  type: textarea
+  attributes:
+    label: Proof of long-term commitment in the Gardener project, e.g., through previous code contributions or company affiliation
+    placeholder: |
+      - PRs reviewed / authored
+      - Gardener Enhancement Proposals (GEPs) authored / reviewed
+      - Issues responded to
+      - Community review meetings contributed to
+      - Company
+  validations:
+    required: true
